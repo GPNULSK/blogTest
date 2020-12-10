@@ -1,0 +1,120 @@
+@charset "UTF-8";
+/*阿里字体图标相关,使用Unicode的方式引入*/
+@font-face {
+  font-family: 'iconfont';  /* project id 1334279 */
+  src: url('//at.alicdn.com/t/font_1334279_cubwromnnhw.eot');
+  src: url('//at.alicdn.com/t/font_1334279_cubwromnnhw.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1334279_cubwromnnhw.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1334279_cubwromnnhw.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1334279_cubwromnnhw.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1334279_cubwromnnhw.svg#iconfont') format('svg');
+}
+
+@font-face {
+  font-family: 'iconfont';
+  /* project id 469120 */
+  src: url('//at.alicdn.com/t/font_469120_pgqpfxel5uufecdi.eot');
+  src: url('//at.alicdn.com/t/font_469120_pgqpfxel5uufecdi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_469120_pgqpfxel5uufecdi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_469120_pgqpfxel5uufecdi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_469120_pgqpfxel5uufecdi.svg#iconfont') format('svg');
+}
+
+.iconfont{
+  font-family: 'iconfont';
+  font-size: 100px;
+}
+
+.iconfont {
+  font-family: "iconfont";
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+  padding-left: 20px
+}
+
+html {
+  background: url(../images/backgroundpc.jpg) no-repeat fixed;
+  background-size: 100% 100%;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  z-index: 100;
+  width: 100%;
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px;
+  opacity: 0.7;
+}
+
+header .nav {
+  margin-top: 20px;
+}
+
+header .target {
+  float: left;
+  margin-top: -10px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+header .target i{
+  font-size: 28px;  /*字体大小，阿里图标会根据字体大小变化*/
+  font-weight: bolder; /*字体加粗，normal表示正常，bold表示加粗，bolder更粗，lighter更细*/
+  margin-top: -10px;
+}
+
+header .target span {
+  font-family: web-font;
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+/*波浪*/
+header:before {
+    content: "";
+    position: fixed;
+    top: 60px;
+    left: 0px;
+    z-index: 10;
+    width: 400%;
+    height: 36px;
+    background-image: url(../images/header_bottom.png);
+    background-position: -50% 100%;
+    -webkit-animation: waveMove 3s linear infinite;
+    animation: waveMove 3s linear infinite;
+}
+
+@-webkit-keyframes waveMove {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+  }
+  to {
+    -webkit-transform: translate3d(-153px, 0, 0);
+    transform: translate3d(-153px, 0, 0)
+  }
+}
+
+@keyframes waveMove {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+  }
+  to {
+    -webkit-transform: translate3d(-300px, 0, 0);
+    transform: translate3d(-300px, 0, 0)
+  }
+}
+
+
