@@ -47,7 +47,7 @@ body {
 }
 
 header {
-  z-index: 100;
+  z-index: 999;
   width: 100%;
   background: white;
   position: fixed;
@@ -65,6 +65,7 @@ header .target {
   float: left;
   margin-top: -10px;
   margin-left: 20px;
+  /*更改鼠标样子*/
   cursor: pointer;
 }
 
@@ -95,6 +96,12 @@ header:before {
     animation: waveMove 3s linear infinite;
 }
 
+header form {
+  float: right;
+
+}
+
+/*波浪动画*/
 @-webkit-keyframes waveMove {
   0% {
     -webkit-transform: translateZ(0);
@@ -105,7 +112,7 @@ header:before {
     transform: translate3d(-153px, 0, 0)
   }
 }
-
+/*波浪动画*/
 @keyframes waveMove {
   0% {
     -webkit-transform: translateZ(0);
@@ -117,4 +124,82 @@ header:before {
   }
 }
 
+body {
+  font-size: 14px;
+  color: #374050;
+}
 
+.searchW {
+  outline: none; /*去除原来的正方形边框*/
+  border: 1px solid rgb(88, 88, 88) !important;
+  border-radius: 19px;
+  height: 27px !important;
+  text-indent: 16px;/*输入框文字缩进，因为有弧度，不缩进不好看*/
+  margin-left: 56px;
+  position: relative;
+  z-index: 3;
+  color: rgb(33, 29, 39);
+  width: 172px !important;
+  float: left;
+}
+
+.searchB {
+  float: left;
+  border-radius: 0 19px 19px 0;
+  outline: none;
+  border: 1px solid rgb(88, 88, 88);
+  height: 31px;
+  padding: 0 15px;
+  margin-left: -18px;
+  position: relative;
+  text-indent: 12px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+/*猫的位置*/
+.search_cat {
+  position: relative;
+  left: 210px;
+  height: 30px;
+  width: 80px;
+  z-index: 999;
+  bottom: 8px;
+  cursor: pointer;
+}
+
+/*登录图标*/
+@font-face {
+  font-family: 'iconfont';  /* project id 2260424 */
+  src: url('//at.alicdn.com/t/font_2260424_mn97jdmhqu.eot');
+  src: url('//at.alicdn.com/t/font_2260424_mn97jdmhqu.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_2260424_mn97jdmhqu.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_2260424_mn97jdmhqu.woff') format('woff'),
+  url('//at.alicdn.com/t/font_2260424_mn97jdmhqu.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_2260424_mn97jdmhqu.svg#iconfont') format('svg');
+}
+
+.iconfont{
+  font-family: 'iconfont';
+
+  cursor: pointer;
+}
+
+.search-form span {
+
+}
+
+@font-face {
+  font-family: 'iconfont';  /* project id 2260424 */
+  src: url('//at.alicdn.com/t/font_2260424_zsevpv25ha.eot');
+  src: url('//at.alicdn.com/t/font_2260424_zsevpv25ha.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_2260424_zsevpv25ha.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_2260424_zsevpv25ha.woff') format('woff'),
+  url('//at.alicdn.com/t/font_2260424_zsevpv25ha.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_2260424_zsevpv25ha.svg#iconfont') format('svg');
+}
+
+.iconfont{
+  font-family: 'iconfont';
+  font-size: 30px;
+  cursor: pointer;
+}
